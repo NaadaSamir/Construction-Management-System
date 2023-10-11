@@ -1,0 +1,73 @@
+{
+  "Files": [
+    {
+      "Id": "F:\\SQL2022\\FinalProject\\FinalProject\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\FinalProject.bundle.scp.css",
+      "PackagePath": "staticwebassets\\FinalProject.bundle.scp.css"
+    },
+    {
+      "Id": "F:\\SQL2022\\FinalProject\\FinalProject\\wwwroot\\Readme.txt",
+      "PackagePath": "staticwebassets\\Readme.txt"
+    },
+    {
+      "Id": "F:\\SQL2022\\FinalProject\\FinalProject\\wwwroot\\about.html",
+      "PackagePath": "staticwebassets\\about.html"
+    },
+    {
+      "Id": "F:\\SQL2022\\FinalProject\\FinalProject\\wwwroot\\blog-details.html",
+      "PackagePath": "staticwebassets\\blog-details.html"
+    },
+    {
+      "Id": "F:\\SQL2022\\FinalProject\\FinalProject\\wwwroot\\blog.html",
+      "PackagePath": "staticwebassets\\blog.html"
+    },
+    {
+      "Id": "F:\\SQL2022\\FinalProject\\FinalProject\\wwwroot\\changelog.txt",
+      "PackagePath": "staticwebassets\\changelog.txt"
+    },
+    {
+      "Id": "F:\\SQL2022\\FinalProject\\FinalProject\\wwwroot\\contact.html",
+      "PackagePath": "staticwebassets\\contact.html"
+    },
+    {
+      "Id": "F:\\SQL2022\\FinalProject\\FinalProject\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "F:\\SQL2022\\FinalProject\\FinalProject\\wwwroot\\project-details.html",
+      "PackagePath": "staticwebassets\\project-details.html"
+    },
+    {
+      "Id": "F:\\SQL2022\\FinalProject\\FinalProject\\wwwroot\\projects.html",
+      "PackagePath": "staticwebassets\\projects.html"
+    },
+    {
+      "Id": "F:\\SQL2022\\FinalProject\\FinalProject\\wwwroot\\sample-inner-page.html",
+      "PackagePath": "staticwebassets\\sample-inner-page.html"
+    },
+    {
+      "Id": "F:\\SQL2022\\FinalProject\\FinalProject\\wwwroot\\service-details.html",
+      "PackagePath": "staticwebassets\\service-details.html"
+    },
+    {
+      "Id": "F:\\SQL2022\\FinalProject\\FinalProject\\wwwroot\\services.html",
+      "PackagePath": "staticwebassets\\services.html"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.FinalProject.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.FinalProject.props",
+      "PackagePath": "build\\FinalProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.FinalProject.props",
+      "PackagePath": "buildMultiTargeting\\FinalProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.FinalProject.props",
+      "PackagePath": "buildTransitive\\FinalProject.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
