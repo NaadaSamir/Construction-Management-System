@@ -1,0 +1,14 @@
+﻿@model Project
+@{
+    Layout = "_MyLayout";
+}
+<br />
+<h1 style="color: saddlebrown; font-size: 36px; font-family: 'Arial', 
+sans-serif; text-align: center; text-transform: uppercase; letter-spacing: 2px;">Update</h1>
+<form method="post" asp-action="Update" asp-controller="Project">
+    <input type="hidden" asp-for="Pnumber" />
+    <partial name="_CreateAndUpdateProj">
+
+
+</form>
+

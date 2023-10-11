@@ -1,0 +1,22 @@
+﻿@model Employee
+@{
+    Layout = "_MyLayout";
+}
+<br />
+<h1 style="color: saddlebrown; font-size: 36px; font-family: 'Arial',
+sans-serif; text-align: center; text-transform: uppercase; letter-spacing: 2px;">
+    Update
+</h1>
+<form method="post" asp-action="Update" asp-controller="Employee">
+    <input type="hidden" asp-for="SSN"/>
+
+    <partial name="_CreatAndUpdateEmp">
+
+</form>
+@*@{
+    ViewBag.Link = "Update";
+}
+
+
+<partial name="_CreatAndUpdateEmp" model="Model" />*@
+

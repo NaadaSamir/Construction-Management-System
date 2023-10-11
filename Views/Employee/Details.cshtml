@@ -1,0 +1,55 @@
+﻿@model Employee
+@{
+    Layout = "_MyLayout";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <style>
+        h1 {
+            color: #dba11a;
+        }
+
+        .card-body {
+            background-color: #dba11a;
+        }
+
+        .card-title, .card-text {
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .btn-primary {
+            background-color: #2980b9;
+            border-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Details</h1>
+
+    <div class="card shadow-lg rounded" style="width: 25rem;">
+        <div class="card-body">
+            <h5 class="card-text">ID: @Model.SSN</h5>
+            <h5 class="card-title">Name: @($"{Model.Fname} {Model.Minit} {Model.Lname}")</h5>
+            <h5 class="card-text">DeptNO: @Model.DNO</h5>
+            <h5 class="card-text">Salary: @Model.Salary</h5>
+            <h5 class="card-text">Address: @Model.Address</h5>
+            <h5 class="card-text">Birth Date: @Model.BDATE</h5>
+            <h5 class="card-text">Sex: @Model.Sex</h5>
+            <h5 class="card-text">SuperSSN: @Model.SuperSSN</h5>
+
+            <a asp-controller="Employee" asp-action="Index" class="btn btn-primary mt-3"><i class="fas fa-arrow-circle-left"></i> Back to list</a>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit-id.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

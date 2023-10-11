@@ -1,0 +1,143 @@
+﻿@model List<Dependent>
+@{
+    Layout = "_MyLayout";
+}
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h1 class="card-title">Dependent Index</h1>
+        <div class="card-actions">
+            @Html.ActionLink("New", "Create", "Dependent", null, new { @class = "btn btn-outline-success" })
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ESSN</th>
+                        <th>DeptNO.</th>
+                        <th>Sex</th>
+                        <th>BirthDate</th>
+                        <th>Relationship</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Essn</td>
+                            <td>@item.Dependent_Name</td>
+                            <td>@item.Sex</td>
+                            <td style="background-color: #dba11a; color: #000;">@item.Bdate</td>
+                            <td>@item.Relationship</td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="Actions">
+                                    <a asp-controller="Dependent" asp-action="Details" asp-route-id="@item.Essn" class="btn btn-outline-info">Details</a>
+                                    <a asp-controller="Dependent" asp-action="Update" asp-route-id="@item.Essn" asp-route-dependentName="@item.Dependent_Name" class="btn btn-outline-secondary">Update</a>
+                                    <a asp-controller="Dependent" asp-action="Delete" asp-route-id="@item.Essn" class="btn btn-outline-danger">Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card {
+        background-color: #f7f7f7;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+        max-width: 1100px;
+    }
+
+    .card-header {
+        background-color: #dba11a;
+        border-radius: 10px 10px 0 0;
+        color: #000;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .card-title {
+        color: #fff;
+        font-size: 24px;
+        font-family: 'Arial', sans-serif;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 0;
+    }
+
+    .card-actions {
+        display: flex;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .table {
+        font-size: 20px;
+        border-color: #dba11a;
+    }
+
+    .thead-dark th {
+        border-color: white;
+    }
+
+    .btn-outline-info {
+        color: #dba11a;
+        border-color: #dba11a;
+        background-color: #fff;
+    }
+
+        .btn-outline-info:hover {
+            color: #fff;
+            background-color: #dba11a;
+        }
+
+    .btn-outline-success {
+        color: #2ecc71;
+        border-color: #2ecc71;
+        background-color: #fff;
+    }
+
+        .btn-outline-success:hover {
+            color: #fff;
+            background-color: #2ecc71;
+        }
+
+    .btn-outline-danger {
+        color: #e74c3c;
+        border-color: #e74c3c;
+        background-color: #fff;
+    }
+
+        .btn-outline-danger:hover {
+            color: #fff;
+            background-color: #e74c3c;
+        }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: #f7f7f7;
+    }
+
+    .btn-group {
+        display: flex;
+    }
+
+        .btn-group a {
+            flex: 1;
+        }
+</style>

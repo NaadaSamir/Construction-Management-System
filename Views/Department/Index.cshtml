@@ -1,0 +1,178 @@
+﻿@model List<Department>
+
+@{
+    Layout = "_MyLayout";
+}
+
+@{
+    ViewData["Title"] = "Index";
+}
+<br/>
+
+
+
+@using (Html.BeginForm("Index", "Department", "Project", FormMethod.Get))
+{
+    <div class="search-container">
+        <input type="text" name="Search" placeholder="Enter a Location" class="search-input" />
+        <button type="submit" class="search-button">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+}
+
+<br/>
+<br />
+
+<div class="card">
+    <div class="card-header">
+        <h1 class="card-title">Department Index</h1>
+        <div class="card-actions">
+            @Html.ActionLink("New", "Create", "Department", null, new { @class = "btn btn-outline-success" })
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th style="background-color: #dba11a; color: #000; font-size: 24px;">DeptName</th>
+                        <th style="background-color: #dba11a; color: #000; font-size: 24px;">DeptNO.</th>
+                        <th style="background-color: #dba11a; color: #000; font-size: 24px;">MGRSSN</th>
+                        <th style="background-color: #dba11a; color: #000; font-size: 24px;">MGRStartDate</th>
+                        <th style="background-color: #dba11a; color: #000; font-size: 24px;"> DeptLocation</th>
+                        <th style="background-color: #dba11a; color: #000; font-size: 24px;">Project Name</th>
+                        <th style="background-color: #dba11a; color: #000; font-size: 24px;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Dname</td>
+                            <td>@item.Dnumber</td>
+                            <td>@item.MGRSSN</td>
+                            <td>@item.MGRStartDate</td>
+                            <td>
+                                @foreach (var loc in item.DEPT_LOCATIONs)
+                                {
+                                    <span>@loc.DLocation</span>
+                                    <br />
+                                }
+
+
+                            </td>
+                            <td>
+                                @foreach (var proj in item.Projects)
+                                {
+                                    <span>@proj.Pname</span>
+                                    <br />
+                                }
+                            </td>
+
+                            <td>
+                                <div class="btn-group" role="group" aria-label="Actions">
+                                    <a asp-controller="Department" asp-action="Details" asp-route-id="@item.Dnumber" class="btn btn-outline-info">Details</a>
+                                    <a asp-controller="Department" asp-action="Update" asp-route-id="@item.Dnumber" class="btn btn-outline-secondary">Update</a>
+                                    <a asp-controller="Department" asp-action="Delete" asp-route-id="@item.Dnumber" class="btn btn-outline-danger">Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card {
+        background-color: #f7f7f7;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+        max-width: 1500px;
+    }
+
+    .card-header {
+        background-color: #dba11a;
+        border-radius: 10px 10px 0 0;
+        color: #000;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .card-title {
+        color: #fff;
+        font-size: 24px;
+        font-family: 'Arial', sans-serif;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 0;
+    }
+
+    .card-actions {
+        display: flex;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .table {
+        font-size: 20px;
+        border-color: #dba11a;
+    }
+
+    .thead-dark th {
+        border-color: white;
+    }
+
+    .btn-outline-info {
+        color: #dba11a;
+        border-color: #dba11a;
+        background-color: #fff;
+    }
+
+        .btn-outline-info:hover {
+            color: #fff;
+            background-color: #dba11a;
+        }
+
+    .btn-outline-success {
+        color: #2ecc71;
+        border-color: #2ecc71;
+        background-color: #fff;
+    }
+
+        .btn-outline-success:hover {
+            color: #fff;
+            background-color: #2ecc71;
+        }
+
+    .btn-outline-danger {
+        color: #e74c3c;
+        border-color: #e74c3c;
+        background-color: #fff;
+    }
+
+        .btn-outline-danger:hover {
+            color: #fff;
+            background-color: #e74c3c;
+        }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: #f7f7f7;
+    }
+
+    .btn-group {
+        display: flex;
+    }
+
+        .btn-group a {
+            flex: 1;
+        }
+</style>

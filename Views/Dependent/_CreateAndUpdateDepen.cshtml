@@ -1,0 +1,49 @@
+﻿@model Dependent
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<form method="post" asp-action="@ViewBag.Link" asp-controller="Dependent">
+    <div class="form-group">
+        <label asp-for="Essn"></label>
+        <input asp-for="Essn" class="form-control" />
+        <span asp-validation-for="Essn" class="text-danger"></span>
+
+    </div>
+    <div class="form-group">
+        <label asp-for="Dependent_Name"></label>
+        <input asp-for="Dependent_Name" class="form-control" />
+        <span asp-validation-for="Dependent_Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Sex"></label>
+        <input asp-for="Sex" class="form-control" />
+        <span asp-validation-for="Sex" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Bdate"></label>
+        <input asp-for="Bdate" class="form-control" />
+        <span asp-validation-for="Bdate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Relationship"></label>
+        <input asp-for="Relationship" class="form-control" />
+        <span asp-validation-for="Relationship" class="text-danger"></span>
+    </div>
+
+    <br />
+
+    <input type="submit" value="Submit" class="btn btn-primary" />
+
+</form>
+
+<a asp-controller="Dependent" asp-action="Index" class="btn btn-primary mt-3"><i class="fas fa-arrow-circle-left"></i> Back to list</a>
+
+@section Scripts{
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+}

@@ -1,0 +1,56 @@
+﻿@model Department
+@*@{
+    Layout = "_MyLayout";
+}*@
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<form method="post" asp-action="@ViewBag.Link" asp-controller="Department">
+    <div class="form-group">
+        <label asp-for="Dname"></label>
+        <input asp-for="Dname" class="form-control" />
+        <span asp-validation-for="Dname" class="text-danger"></span>
+
+    </div>
+@*
+    <div class="form-group">
+        <label asp-for="Dnumber"></label>
+        <input asp-for="Dnumber" class="form-control" />
+        <span asp-validation-for="Dnumber" class="text-danger"></span>
+
+    </div>*@
+    <div class="form-group">
+        <label asp-for="MGRSSN"></label>
+        <input asp-for="MGRSSN" class="form-control" />
+        <span asp-validation-for="MGRSSN" class="text-danger"></span>
+
+    </div>
+    <div class="form-group">
+        <label asp-for="MGRStartDate"></label>
+        <input asp-for="MGRStartDate" class="form-control" />
+        <span asp-validation-for="MGRStartDate" class="text-danger"></span>
+    </div>
+  
+    <br />
+
+
+    <input type="submit" value="Submit" class="btn btn-primary" />
+    <br/>
+
+
+
+</form>
+
+
+
+<a asp-controller="Department" asp-action="Index" class="btn btn-primary mt-3"><i class="fas fa-arrow-circle-left"></i> Back to list</a>
+
+@section Scripts{
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+}
+
