@@ -1,0 +1,86 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\assets\**" />
+    <Compile Remove="wwwroot\fonts\**" />
+    <Compile Remove="wwwroot\forms\**" />
+    <Content Remove="wwwroot\assets\**" />
+    <Content Remove="wwwroot\fonts\**" />
+    <Content Remove="wwwroot\forms\**" />
+    <EmbeddedResource Remove="wwwroot\assets\**" />
+    <EmbeddedResource Remove="wwwroot\fonts\**" />
+    <EmbeddedResource Remove="wwwroot\forms\**" />
+    <None Remove="wwwroot\assets\**" />
+    <None Remove="wwwroot\fonts\**" />
+    <None Remove="wwwroot\forms\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\bootstrap.js" />
+    <None Include="wwwroot\js\custom.js" />
+    <None Include="wwwroot\js\jquery-3.4.1.min.js" />
+    <None Include="wwwroot\js\site.js" />
+    <None Include="wwwroot\source\js\script.js" />
+    <None Include="wwwroot\source\plugins\bootstrap\bootstrap.min.js" />
+    <None Include="wwwroot\source\plugins\colorbox\jquery.colorbox.js" />
+    <None Include="wwwroot\source\plugins\fontawesome\webfonts\fa-brands-400.svg" />
+    <None Include="wwwroot\source\plugins\fontawesome\webfonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\source\plugins\fontawesome\webfonts\fa-regular-400.svg" />
+    <None Include="wwwroot\source\plugins\fontawesome\webfonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\source\plugins\fontawesome\webfonts\fa-solid-900.svg" />
+    <None Include="wwwroot\source\plugins\fontawesome\webfonts\fa-solid-900.woff2" />
+    <None Include="wwwroot\source\plugins\google-map\map.js" />
+    <None Include="wwwroot\source\plugins\jQuery\jquery.min.js" />
+    <None Include="wwwroot\source\plugins\shuffle\shuffle.min.js" />
+    <None Include="wwwroot\source\plugins\slick\fonts\slick.svg" />
+    <None Include="wwwroot\source\plugins\slick\README.markdown" />
+    <None Include="wwwroot\source\plugins\slick\slick-animation.min.js" />
+    <None Include="wwwroot\source\plugins\slick\slick.min.js" />
+    <None Include="wwwroot\source\scss\style.scss" />
+    <None Include="wwwroot\source\scss\templates\_main.scss" />
+    <None Include="wwwroot\source\scss\templates\_navigation.scss" />
+    <None Include="wwwroot\source\scss\_buttons.scss" />
+    <None Include="wwwroot\source\scss\_common.scss" />
+    <None Include="wwwroot\source\scss\_mixins.scss" />
+    <None Include="wwwroot\source\scss\_typography.scss" />
+    <None Include="wwwroot\source\scss\_variables.scss" />
+    <None Include="wwwroot\theme\css\style.css.map" />
+    <None Include="wwwroot\theme\js\script.js" />
+    <None Include="wwwroot\theme\plugins\bootstrap\bootstrap.min.js" />
+    <None Include="wwwroot\theme\plugins\colorbox\jquery.colorbox.js" />
+    <None Include="wwwroot\theme\plugins\fontawesome\webfonts\fa-brands-400.svg" />
+    <None Include="wwwroot\theme\plugins\fontawesome\webfonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\theme\plugins\fontawesome\webfonts\fa-regular-400.svg" />
+    <None Include="wwwroot\theme\plugins\fontawesome\webfonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\theme\plugins\fontawesome\webfonts\fa-solid-900.svg" />
+    <None Include="wwwroot\theme\plugins\fontawesome\webfonts\fa-solid-900.woff2" />
+    <None Include="wwwroot\theme\plugins\google-map\map.js" />
+    <None Include="wwwroot\theme\plugins\jQuery\jquery.min.js" />
+    <None Include="wwwroot\theme\plugins\shuffle\shuffle.min.js" />
+    <None Include="wwwroot\theme\plugins\slick\fonts\slick.svg" />
+    <None Include="wwwroot\theme\plugins\slick\README.markdown" />
+    <None Include="wwwroot\theme\plugins\slick\slick-animation.min.js" />
+    <None Include="wwwroot\theme\plugins\slick\slick.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.15" />
+  </ItemGroup>
+
+</Project>
